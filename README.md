@@ -32,8 +32,17 @@ The main objective is to compare two metaheuristics by analyzing Time-To-Target 
   - The algorithm terminates after a maximum number of cycles or when the temperature hits the minimum, returning the best solution found.
 
 ## Results  
-After analyzing the Time-To-Target (TTT) graphs generated from algorithm executions on different problem instances, it was observed that Simulated Annealing (SA) outperformed BRKGA.
+## Results  
 
-SA not only reached solutions faster in most instances but also showed greater consistency, maintaining low variation between runs.
+| Instance (n) | Target (best solution * factor) | Time to target solution - SA | Time to target solution - BRKGA |
+|--------------|---------------------------------|-------------------------------|---------------------------------|
+| n105         | 6019 * 1.7 = 10232              | ~1 s (100% of runs)          | 6–14 s (100% of runs)           |
+| n171         | 10203 * 2.1 = 21426             | ~1 s (100% of runs)          | 40–60 s (100% of runs)          |
+| n213         | 7314 * 2.3 = 16822              | ~1 s (100% of runs)          | 35–60 s (100% of runs)          |
+| n289         | 14447 * 2.6 = 37562             | ~1 s (100% of runs)          | 220–300 s (100% of runs)        |
 
-These results indicate that, for the tested dataset, SA is more efficient and reliable in solving the PDTSP, making it especially advantageous when computational time is limited.
+### Analysis and Conclusion  
+
+- **Simulated Annealing (SA)** consistently finds the target solution **almost immediately (~1s)** across all instances.  
+- **BRKGA** also reaches the target in all runs, but with a **significantly higher convergence time**, which increases as the instance size grows.  
+- These results indicate that **SA is more time-efficient** for reaching the target solution under the tested conditions, while BRKGA requires more computational effort to achieve similar success.  
