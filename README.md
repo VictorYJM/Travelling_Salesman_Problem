@@ -31,8 +31,7 @@ The main objective is to compare two metaheuristics by analyzing Time-To-Target 
   - The temperature gradually decreases until reaching a minimum threshold, making the search stricter over time.  
   - The algorithm terminates after a maximum number of cycles or when the temperature hits the minimum, returning the best solution found.
 
-## Results  
-## Results  
+## Results    
 
 | Instance (n) | Target (best solution * factor) | Time to target solution - SA | Time to target solution - BRKGA |
 |--------------|---------------------------------|-------------------------------|---------------------------------|
